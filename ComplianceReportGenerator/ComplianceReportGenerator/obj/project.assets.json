@@ -8069,26 +8069,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\16109\\.nuget\\packages\\": {}
+    "/Users/CORINNE/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\16109\\Coding\\Report-Generator\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
+      "projectUniqueName": "/Users/CORINNE/LiftOff/Report Generator/ComplianceReportGenerator/ComplianceReportGenerator/ComplianceReportGenerator.csproj",
       "projectName": "ComplianceReportGenerator",
-      "projectPath": "C:\\Users\\16109\\Coding\\Report-Generator\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
-      "packagesPath": "C:\\Users\\16109\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\16109\\Coding\\Report-Generator\\ComplianceReportGenerator\\ComplianceReportGenerator\\obj\\",
+      "projectPath": "/Users/CORINNE/LiftOff/Report Generator/ComplianceReportGenerator/ComplianceReportGenerator/ComplianceReportGenerator.csproj",
+      "packagesPath": "/Users/CORINNE/.nuget/packages/",
+      "outputPath": "/Users/CORINNE/LiftOff/Report Generator/ComplianceReportGenerator/ComplianceReportGenerator/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\16109\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/CORINNE/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8152,7 +8150,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
       }
     }
   }
