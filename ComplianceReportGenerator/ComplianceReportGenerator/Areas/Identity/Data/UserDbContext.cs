@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ComplianceReportGenerator.Data
 {
-    public class ReportDbContext : IdentityDbContext<IdentityUser>
+    public class UserDbContext : IdentityDbContext<IdentityUser>
     {
-        public ReportDbContext(DbContextOptions<ReportDbContext> options)
+        public UserDbContext(DbContextOptions<UserDbContext> options)
             : base(options)
         {
         }
