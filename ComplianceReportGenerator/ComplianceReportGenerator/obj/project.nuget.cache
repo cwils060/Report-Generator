@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m33Wlx+rt+1A2Gh6wMknJE+JX/aRi91SlXJc7cAzI1VMPyOcwOpvw4iexy1MFfKefuFVUEO3QmaRoirKzLcAzw==",
+  "dgSpecHash": "y246iDFRi8waimioiPkmpc6oZ7JoBObfFUQQiGVdOCpoFjrxNzpqmx05VYtaNFmYA3W9r0jDlihBLttI+OqawQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\16109\\Coding\\Report-Generator\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
+  "projectFilePath": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\16109\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\16109\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",

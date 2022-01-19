@@ -8476,11 +8476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\16109\\Coding\\Report-Generator\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
       "projectName": "ComplianceReportGenerator",
-      "projectPath": "C:\\Users\\16109\\Coding\\Report-Generator\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
+      "projectPath": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
       "packagesPath": "C:\\Users\\16109\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\16109\\Coding\\Report-Generator\\ComplianceReportGenerator\\ComplianceReportGenerator\\obj\\",
+      "outputPath": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\16109\\AppData\\Roaming\\NuGet\\NuGet.Config",

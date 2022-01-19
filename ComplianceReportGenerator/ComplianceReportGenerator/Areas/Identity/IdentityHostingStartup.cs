@@ -16,8 +16,8 @@ namespace ComplianceReportGenerator.Areas.Identity
         {
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<ReportDbContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("ReportDbContextConnection")));
+                    options.UseMySQL(
+                        context.Configuration.GetConnectionString("DefaultConnection")));
 
                 services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<ReportDbContext>();

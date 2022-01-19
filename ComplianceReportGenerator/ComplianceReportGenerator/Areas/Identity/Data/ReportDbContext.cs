@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ComplianceReportGenerator.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ComplianceReportGenerator.Data
 {
-    public class UserDbContext : IdentityDbContext<IdentityUser>
+    public class ReportDbContext : IdentityDbContext<IdentityUser>
     {
-        public UserDbContext(DbContextOptions<UserDbContext> options)
+        public DbSet<Test> Tests { get; set; }
+        public DbSet<Test2> Tests2 { get; set; }
+        public DbSet<Test3> Tests3 { get; set; }
+        public ReportDbContext(DbContextOptions<ReportDbContext> options)
             : base(options)
         {
         }
