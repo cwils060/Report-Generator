@@ -1,0 +1,56 @@
+﻿<Properties StartupConfiguration="{6E388792-19FF-4E47-95BE-6F4781182E31}|Default">
+  <MonoDevelop.Ide.ItemProperties.ComplianceReportGenerator PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ComplianceReportGenerator/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml">
+    <Files>
+      <File FileName="ComplianceReportGenerator/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Views/Shared/_LoginPartial.cshtml" Line="19" Column="2" />
+      <File FileName="ComplianceReportGenerator/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Properties/serviceDependencies.json" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Models/Test.cs" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Models/Test2.cs" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Views/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Areas/Identity/Pages/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Areas/Identity/Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Areas/Identity/IdentityHostingStartup.cs" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Migrations/ReportDbContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="ComplianceReportGenerator/Services/EmptyClass.cs" Line="21" Column="64" />
+      <File FileName="ComplianceReportGenerator/Startup.cs" Line="29" Column="15" />
+      <File FileName="ComplianceReportGenerator/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ComplianceReportGenerator" expanded="True">
+            <Node name="ComplianceReportGenerator" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True">
+                    <Node name="Account" expanded="True">
+                      <Node name="RegisterConfirmation.cshtml" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
