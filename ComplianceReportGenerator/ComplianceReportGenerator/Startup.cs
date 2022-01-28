@@ -29,8 +29,9 @@ namespace ComplianceReportGenerator
             //requires:
             //using AspNetCoreEmailConfirmationSendGrid.Services;
             //using Microsoft.AspNetCore.Identity.UI.Services
-            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IEmailSender, EmailSender>(p => new EmailSender(Configuration["sendGridKey"]));
 
+            var key = Configuration["sendGridKey"];
 
             services.AddDbContext<ReportDbContext>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
