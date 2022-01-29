@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj": {}
+    "/Users/erbuc_000/Desktop/Report-Generator/ComplianceReportGenerator/ComplianceReportGenerator/ComplianceReportGenerator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj": {
+    "/Users/erbuc_000/Desktop/Report-Generator/ComplianceReportGenerator/ComplianceReportGenerator/ComplianceReportGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
+        "projectUniqueName": "/Users/erbuc_000/Desktop/Report-Generator/ComplianceReportGenerator/ComplianceReportGenerator/ComplianceReportGenerator.csproj",
         "projectName": "ComplianceReportGenerator",
-        "projectPath": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
-        "packagesPath": "C:\\Users\\16109\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\obj\\",
+        "projectPath": "/Users/erbuc_000/Desktop/Report-Generator/ComplianceReportGenerator/ComplianceReportGenerator/ComplianceReportGenerator.csproj",
+        "packagesPath": "/Users/erbuc_000/.nuget/packages/",
+        "outputPath": "/Users/erbuc_000/Desktop/Report-Generator/ComplianceReportGenerator/ComplianceReportGenerator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\16109\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/erbuc_000/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,6 +83,10 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.25.2, )"
             }
           },
           "imports": [
@@ -105,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }

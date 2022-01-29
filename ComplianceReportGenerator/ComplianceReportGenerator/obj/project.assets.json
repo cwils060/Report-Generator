@@ -1352,6 +1352,19 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "SendGrid/9.25.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "starkbank-ecdsa": "[1.3.3, 2.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/SendGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SendGrid.dll": {}
+        }
+      },
       "SSH.NET/2020.0.0-beta1": {
         "type": "package",
         "dependencies": {
@@ -1371,6 +1384,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/SshNet.Security.Cryptography.dll": {}
+        }
+      },
+      "starkbank-ecdsa/1.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/StarkbankEcdsa.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/StarkbankEcdsa.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -4724,6 +4746,29 @@
         "runtime.native.system.nuspec"
       ]
     },
+    "SendGrid/9.25.2": {
+      "sha512": "5C+0ThiFfaCWaA1k6zyzbqAlgEsE9uIeygw+TmvzmHJHD6XFfd7cUXq968mYmMmjI3YgLT5CkhDryzarouSIIQ==",
+      "type": "package",
+      "path": "sendgrid/9.25.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/SendGrid.dll",
+        "lib/net40/SendGrid.pdb",
+        "lib/net40/SendGrid.xml",
+        "lib/net452/SendGrid.dll",
+        "lib/net452/SendGrid.pdb",
+        "lib/net452/SendGrid.xml",
+        "lib/netstandard1.3/SendGrid.dll",
+        "lib/netstandard1.3/SendGrid.pdb",
+        "lib/netstandard1.3/SendGrid.xml",
+        "lib/netstandard2.0/SendGrid.dll",
+        "lib/netstandard2.0/SendGrid.pdb",
+        "lib/netstandard2.0/SendGrid.xml",
+        "sendgrid.9.25.2.nupkg.sha512",
+        "sendgrid.nuspec"
+      ]
+    },
     "SSH.NET/2020.0.0-beta1": {
       "sha512": "GdgJ3eFSEXkGIror8SfxbXKJM/g0Eofm4bM6LIYANSM1foOJc640adnr1dqs2BTf/MKwL+9NqOUm3RvQm1CxtA==",
       "type": "package",
@@ -4786,6 +4831,22 @@
         "lib/wp8/SshNet.Security.Cryptography.xml",
         "sshnet.security.cryptography.1.3.0.nupkg.sha512",
         "sshnet.security.cryptography.nuspec"
+      ]
+    },
+    "starkbank-ecdsa/1.3.3": {
+      "sha512": "OblOaKb1enXn+dSp7tsx9yjwV+/BEKM9jFhshIkZTwCk7LuTFTp+wSon6rFzuPiIiTGtvVWQNUw2slHjGktJog==",
+      "type": "package",
+      "path": "starkbank-ecdsa/1.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/StarkbankEcdsa.dll",
+        "lib/net452/StarkbankEcdsa.dll",
+        "lib/netstandard1.3/StarkbankEcdsa.dll",
+        "lib/netstandard2.0/StarkbankEcdsa.dll",
+        "lib/netstandard2.1/StarkbankEcdsa.dll",
+        "starkbank-ecdsa.1.3.3.nupkg.sha512",
+        "starkbank-ecdsa.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -8467,30 +8528,29 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.12",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "MySql.EntityFrameworkCore >= 5.0.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 5.0.0"
+      "Pomelo.EntityFrameworkCore.MySql >= 5.0.0",
+      "SendGrid >= 9.25.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\16109\\.nuget\\packages\\": {}
+    "/Users/erbuc_000/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
+      "projectUniqueName": "/Users/erbuc_000/Desktop/Report-Generator/ComplianceReportGenerator/ComplianceReportGenerator/ComplianceReportGenerator.csproj",
       "projectName": "ComplianceReportGenerator",
-      "projectPath": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\ComplianceReportGenerator.csproj",
-      "packagesPath": "C:\\Users\\16109\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\16109\\Coding\\compliance report\\ComplianceReportGenerator\\ComplianceReportGenerator\\obj\\",
+      "projectPath": "/Users/erbuc_000/Desktop/Report-Generator/ComplianceReportGenerator/ComplianceReportGenerator/ComplianceReportGenerator.csproj",
+      "packagesPath": "/Users/erbuc_000/.nuget/packages/",
+      "outputPath": "/Users/erbuc_000/Desktop/Report-Generator/ComplianceReportGenerator/ComplianceReportGenerator/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\16109\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/erbuc_000/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8554,6 +8614,10 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "SendGrid": {
+            "target": "Package",
+            "version": "[9.25.2, )"
           }
         },
         "imports": [
@@ -8574,7 +8638,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }
