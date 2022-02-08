@@ -1,4 +1,5 @@
 ﻿using ComplianceReportGenerator.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,9 +19,10 @@ namespace ComplianceReportGenerator.Controllers
             _logger = logger;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
-            return View();
+            return View(Redirect("identity/account/login"));
         }
 
         public IActionResult Privacy()
