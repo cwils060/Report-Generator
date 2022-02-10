@@ -19,10 +19,10 @@ namespace ComplianceReportGenerator.Controllers
             _logger = logger;
         }
 
-        [Authorize]
+    
         public IActionResult Index()
         {
-            return View(Redirect("identity/account/login"));
+            return View();
         }
 
         public IActionResult Privacy()
