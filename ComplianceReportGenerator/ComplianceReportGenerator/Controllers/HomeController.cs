@@ -22,7 +22,14 @@ namespace ComplianceReportGenerator.Controllers
     
         public IActionResult Index()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return LocalRedirect("/Identity/Account/Login");
+            }
         }
 
         public IActionResult Privacy()
