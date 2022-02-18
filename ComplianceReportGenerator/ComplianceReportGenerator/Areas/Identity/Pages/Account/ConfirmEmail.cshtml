@@ -4,4 +4,27 @@
     ViewData["Title"] = "Confirm email";
 }
 
+<style>
+    div {
+        text-align: center;
+    }
+
+    .confirmation {
+        background-color: #f0f8ff;
+        width: 100%;
+        height: fit-content;
+        padding: 20px;
+        margin: auto;
+       
+    }
+</style>
+
 <h1>@ViewData["Title"]</h1>
+
+    <div><img src="https://www.pinclipart.com/picdir/big/493-4937485_confirmation-icon-clipart.png" height="100" width="100" /></div><br />
+
+    <div class="confirmation">
+        <h2 style="color:mediumseagreen;">Congratulations! <br />Your email has been confirmed!</h2>
+
+        <h3><a asp-page="./Login">Login to Your Account</a></h3>
+    </div>
