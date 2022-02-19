@@ -36,6 +36,10 @@ namespace ComplianceReportGenerator.Controllers
         {
             return View();
         }
+        public IActionResult citation()
+        {
+            return LocalRedirect("/Identity/citation/Index"); 
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
