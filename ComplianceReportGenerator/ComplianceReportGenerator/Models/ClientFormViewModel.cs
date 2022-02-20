@@ -18,10 +18,7 @@ namespace ComplianceReportGenerator.Models
         public string FacilityType { get; set; }
         public string Address { get; set; }
 
-        public ClientFormViewModel()
-        {
-
-        }
+        
         public ClientFormViewModel(DateTime date, string clientName, string clientRep, bool staff, string facilityType, string address)
         {
             Date = date;

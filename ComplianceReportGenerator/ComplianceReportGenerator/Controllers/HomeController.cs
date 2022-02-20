@@ -31,6 +31,35 @@ namespace ComplianceReportGenerator.Controllers
                 return LocalRedirect("/Identity/Account/Login");
             }
         }
+        [HttpPost]
+        public ActionResult createform1(DateTime txtDate, string txtAddress, string txtClientName, string txtClientRep, string txtFacilityType, string chkStaff)
+
+        {
+
+            ViewBag.Date = txtDate;
+
+            ViewBag.Adress = txtAddress;
+            ViewBag.ClientName = txtClientName;
+            ViewBag.ClientRep = txtClientRep;
+            ViewBag.FacilityType = txtFacilityType;
+
+            if (chkStaff != null)
+
+                ViewBag.Staff = "Selected";
+
+            else
+
+                ViewBag.Staff = "Not Selected";
+
+
+
+            return View();
+
+        }
+        public IActionResult createform()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
