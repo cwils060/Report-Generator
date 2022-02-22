@@ -3,20 +3,33 @@
 @{
     ViewData["Title"] = "Register confirmation";
 }
+<style>
+    div {
+        text-align: center;
+    }
 
-<h1>@ViewData["Title"]</h1>
-@{
-    if (@Model.DisplayConfirmAccountLink)
-    {
-        <p>
-            This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
-            Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
-        </p>
+    .registration {
+        background-color: #f0f8ff;
+        width: 100%;
+        height: fit-content;
+        padding: 20px;
+        margin: auto;
     }
-    else
-    {
-        <p>
-            Please check your email to confirm your account.
-        </p>
-    }
-}
+</style>
+
+<h1>@ViewData["Title"]</h1><br />
+
+<div><img src="https://clipart.world/wp-content/uploads/2021/06/Green-Check-Mark-clipart-png-images.png" height="200" width="200" /></div><br />
+
+<div class="registration">
+    
+    <h3 style="color:mediumseagreen;">Thank you for registering! Verify your email to finish signing up:</h3>
+    <p>Please check your email to verify your email address. Once you verify your account you will be able to login. Please check your spam folder.</p>
+    <p>Alternatively, if you didn't receive an email - <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a> </p>
+
+</div>
+
+
+
+
+
