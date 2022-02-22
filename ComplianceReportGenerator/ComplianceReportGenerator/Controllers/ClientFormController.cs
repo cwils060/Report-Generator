@@ -21,10 +21,22 @@ namespace ComplianceReportGenerator.Controllers
             }
         }
         
-        public ClientFormViewModel CreateClientForm(DateTime date, string clientName, string clientRep, bool staff, string facilityType, string address)
+        public IActionResult CreateClientForm(ClientFormViewModel clientFormViewModel)
         {
-            ClientFormViewModel clientFormViewModel = new ClientFormViewModel(date, clientName, clientRep, staff, facilityType, address);
-            return clientFormViewModel;
+           if (ModelState.IsValid)
+            {
+                ClientFormViewModel newClientForm = new ClientFormViewModel
+                {
+                    Date = clientFormViewModel.Date,
+                    ClientName = clientFormViewModel.ClientName,
+                    ClientRep = clientFormViewModel.ClientRep,
+                    Staff = clientFormViewModel.Staff,
+                    FacilityType = clientFormViewModel.FacilityType,
+                    Address = clientFormViewModel.Address
+                };
+                return LocalRedirect("/Home");
+            }
+            return LocalRedirect("/Home/CreateForm");
         }
     }
 }
