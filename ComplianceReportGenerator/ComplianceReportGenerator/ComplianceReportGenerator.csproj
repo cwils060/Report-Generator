@@ -31,8 +31,12 @@
   <ItemGroup>
     <None Remove="Services\" />
     <None Remove="SendGrid" />
+    <None Remove="Views\Content\" />
+    <None Remove="Views\Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+    <Folder Include="Views\Content\" />
+    <Folder Include="Views\Content\Images\" />
   </ItemGroup>
 </Project>
