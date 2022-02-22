@@ -34,5 +34,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+    <Folder Include="wwwroot\Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Content\Images\IMG_8358.JPG" />
+    <Content Remove="wwwroot\Content\Images\IMG_8359.jpg" />
+    <Content Remove="wwwroot\Content\Images\IMG_8360.JPG" />
+    <Content Remove="wwwroot\Content\Images\IMG_8361.JPG" />
+    <Content Remove="wwwroot\Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Content\Images\IMG_8358.JPG" />
+    <None Include="wwwroot\Content\Images\IMG_8359.jpg" />
+    <None Include="wwwroot\Content\Images\IMG_8360.JPG" />
+    <None Include="wwwroot\Content\Images\IMG_8361.JPG" />
   </ItemGroup>
 </Project>
