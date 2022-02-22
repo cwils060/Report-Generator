@@ -31,6 +31,11 @@ namespace ComplianceReportGenerator.Controllers
                 return LocalRedirect("/Identity/Account/Login");
             }
         }
+        
+        public IActionResult CreateForm()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

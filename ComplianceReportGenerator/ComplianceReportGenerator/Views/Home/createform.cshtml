@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+
+@model ComplianceReportGenerator.Models.ClientFormViewModel
+<!--round edges for boxes, buttons black with white text, everything separated, -->
+<form asp-controller="ClientForm" asp-action="CreateClientForm" method="post">
+        <div>
+            <label asp-for="Date">Date of Audit: </label>
+            <input asp-for="Date" />
+            <span asp-validation-for="Date"></span>
+        </div>
+        <div>
+            <label asp-for="Address">Address: </label>
+            <input asp-for="Address" />
+            <span asp-validation-for="Address"></span>
+        </div>
+        <div>
+            <label asp-for="ClientName">Client: </label>
+            <input asp-for="ClientName" />
+            <span asp-validation-for="ClientName"></span>
+        </div>
+        <div>
+            <label asp-for="ClientRep">Client Representative: </label>
+            <input asp-for="ClientRep" />
+            <span asp-validation-for="ClientRep"></span>
+        </div>
+    <!--the checkbox needs revisiting for validation and functionality-->
+        <div><input type="checkbox" name="chkStaff" />and Staff</div>
+        <div>
+    <!--make facility type a drop down menu. the three types are: Cultivation, Production, Dispensary-->
+            <label asp-for="FacilityType">Facility Type: </label>
+            <input asp-for="FacilityType" />
+            <span asp-validation-for="FacilityType"></span>
+        </div>
+        <input type="submit" value="Submit Client Details" />
+</form>
+
