@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,8 +11,10 @@ namespace ComplianceReportGenerator.Models
     public class ClientFormViewModel
     {
         public int Id { get; set; }
+        static private int nextId = 1;
         [Required(ErrorMessage ="Date is required")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yy}")]
+        /*[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yy}")]*/
+        [DataType(DataType.Date)]
         public DateTime Date {get; set; }
         [Required(ErrorMessage = "Client is required")]
         public string ClientName { get; set; }
@@ -24,7 +28,8 @@ namespace ComplianceReportGenerator.Models
 
         public ClientFormViewModel()
         {
-
+            Id = nextId;
+            nextId++;
         }
         
         public ClientFormViewModel(DateTime date, string clientName, string clientRep, bool staff, string facilityType, string address)
@@ -37,5 +42,4 @@ namespace ComplianceReportGenerator.Models
             Address = address;
         }
     }
-
 }
