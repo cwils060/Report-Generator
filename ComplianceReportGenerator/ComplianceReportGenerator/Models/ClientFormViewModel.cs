@@ -32,7 +32,7 @@ namespace ComplianceReportGenerator.Models
             nextId++;
         }
         
-        public ClientFormViewModel(DateTime date, string clientName, string clientRep, bool staff, string facilityType, string address)
+        public ClientFormViewModel(DateTime date, string clientName, string clientRep, bool staff, string facilityType, string address):this ()
         {
             Date = date;
             ClientName = clientName;
@@ -41,5 +41,35 @@ namespace ComplianceReportGenerator.Models
             FacilityType = facilityType;
             Address = address;
         }
+
+        public override string ToString()
+        {
+            string output = "";
+
+           
+            
+            output = string.Format( 
+                    "Date of Audit: \n" +
+                    "Client Name: \n" +
+                    "Client Rep: \n" +
+                    "Facility Type: \n" +
+                    "Address: \n", Date, ClientName, ClientRep, FacilityType, Address);
+
+            return output;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is ClientFormViewModel clientFormViewModel &&
+                   Id == clientFormViewModel.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
+
+
+
     }
 }
