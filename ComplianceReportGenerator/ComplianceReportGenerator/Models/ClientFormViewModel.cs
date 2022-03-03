@@ -12,17 +12,23 @@ namespace ComplianceReportGenerator.Models
     {
         public int Id { get; set; }
         static private int nextId = 1;
+        
         [Required(ErrorMessage ="Date is required")]
         /*[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yy}")]*/
         [DataType(DataType.Date)]
         public DateTime Date {get; set; }
+        
         [Required(ErrorMessage = "Client is required")]
         public string ClientName { get; set; }
+        
         [Required(ErrorMessage = "Client representative is required")]
         public string ClientRep { get; set; }
+        
         public bool Staff { get; set; }
+        
         [Required(ErrorMessage = "Facility type is required")]
         public string FacilityType { get; set; }
+        
         [Required(ErrorMessage = "Address is required")]
         public string Address { get; set; }
 

@@ -21,7 +21,7 @@ namespace ComplianceReportGenerator.Controllers
             }
         }
         
-
+        [HttpPost]
         public IActionResult CreateClientForm(ClientFormViewModel clientFormViewModel)
         {
            if (ModelState.IsValid)

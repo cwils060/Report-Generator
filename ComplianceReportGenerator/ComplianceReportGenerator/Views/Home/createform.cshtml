@@ -9,40 +9,39 @@
         <div class="row">
             <div class="col-sm">
                 <div>
-                    <label style="padding-top:25px; padding-bottom:5px; padding-left:100px;"asp-for="Date">Date of Audit: </label>
+                    <label style="padding-top:1rem; padding-bottom:.4rem; padding-left:2rem;"asp-for="Date">Date of Audit: </label>
                 </div>
                 <div>
-                    <label style="padding-top:5px; padding-bottom: 5px; padding-left:100px;" asp-for="ClientName">Client Name: </label>
+                    <label style="padding-top: .4rem; padding-bottom: .4rem; padding-left: 2rem;" asp-for="ClientName">Client Name: </label>
                 </div>
                 <div>
-                    <label style="padding-top: 5px; padding-bottom: 5px; padding-left:100px;" asp-for="ClientRep">Client Rep: </label>
+                    <label style="padding-top: .4rem; padding-bottom: .4rem; padding-left: 2rem;" asp-for="ClientRep">Client Rep: </label>
                 </div>
                 <div>
-                    <label style="padding-top: 25px; padding-bottom: 5px; padding-left:100px;" asp-for="FacilityType">Facility Type: </label>
+                    <label style="padding-top: 1.65rem; padding-bottom: .4rem; padding-left: 2rem;" asp-for="FacilityType">Facility Type: </label>
                 </div>
             </div>
             <div class="col-sm">
-                <div style="padding-top: 25px; padding-bottom:5px; padding-left:5px; padding-right:5px;">
-                    <input style="border-width:2px; border-radius:4px; border-color:black;" asp-for="Date" />
+                <div style="padding-top: 1rem; padding-bottom:.4rem; padding-left:.4rem; padding-right:.4rem;">
+                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="Date"/>
                 </div>
                 <span asp-validation-for="Date"></span>
-                <div style="padding:5px;">
-                    <input style="border-width:2px; border-radius:4px; border-color:black;" asp-for="ClientName" />
+                <div style="padding:.4rem;">
+                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="ClientName" />
                 </div>
                 <span asp-validation-for="ClientName"></span>
-                <div style="padding:5px;">
+                <div style="padding:.4rem;">
                     <div>
-                        <input style="border-width:2px; border-radius:4px; border-color:black;" asp-for="ClientRep" />
+                        <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="ClientRep" />
                     </div>
                     <span asp-validation-for="ClientRep"></span>
                     <!--the checkbox needs revisiting for styling. should have same styling as other boxes. check with nicole n group-->
                     <div>
-                        <input style="border-width:2px; border-radius:4px; border-color:black;" type="checkbox" asp-for="Staff" /> and staff
+                        <input style="border-width:1rem; border-radius:.1rem; border-color:black;" type="checkbox" asp-for="Staff" /> and staff
                     </div>
                 </div>
-                <div style ="padding:5px;" class="form-group">
-                    <!--make facility type a drop down menu. the three types are: Cultivation, Production, Dispensary-->
-                    <select style="border-width:2px; border-radius:4px; border-color:black;" name="FacilityType" id="FacilityType">
+                <div style ="padding:.4rem;" class="form-group">
+                    <select style="border-width:.15rem; border-radius:.25rem; border-color:black;" name="FacilityType" id="FacilityType">
                         <option value=""></option>
                         <option value="Cultivation">Cultivation</option>
                         <option value="Production">Production</option>
@@ -53,12 +52,12 @@
             </div>
             <div class="col-sm">
                 <div>
-                    <label style="padding-top:25px; padding-bottom:5px; padding-left:100px;" asp-for="Address">Address: </label>
+                    <label style="padding-top:1rem; padding-bottom:.4rem; padding-left:3rem;" asp-for="Address">Address: </label>
                 </div>
             </div>
             <div class="col-sm">
-                <div style="padding-top: 25px; padding-bottom:5px; padding-left:5px; padding-right:5px;">
-                    <input style="border-width:2px; border-radius:4px; border-color:black;" asp-for="Address" />
+                <div style="padding-top: 1rem; padding-bottom:.4rem; padding-left:.4rem; padding-right:.4rem; ">
+                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="Address" />
 
                 </div>
                 <!-- Need to check documentation and with group and Nicole for multiline inputs for address. looks much better. do we need it?
@@ -71,7 +70,7 @@
         </div>
     </div>
     <div style="text-align:center;">
-        <input style="border-radius: 4px; border-width: 0px; background-color: black; color: white;" type="submit" value="Begin Citations Search" />
+        <input style="border-radius: .35rem; border-width: 0rem; background-color: black; color: white;" type="submit" value="Begin Citations Search" />
     </div>
 </form>
 
