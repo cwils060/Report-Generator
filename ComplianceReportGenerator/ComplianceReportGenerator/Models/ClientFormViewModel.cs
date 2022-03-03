@@ -12,6 +12,7 @@ namespace ComplianceReportGenerator.Models
     {
         public int Id { get; set; }
         static private int nextId = 1;
+        public List<Citation> Citations { get; set; }
         [Required(ErrorMessage ="Date is required")]
         /*[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yy}")]*/
         [DataType(DataType.Date)]
