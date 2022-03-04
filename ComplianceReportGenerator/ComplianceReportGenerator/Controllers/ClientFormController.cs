@@ -68,7 +68,9 @@ namespace ComplianceReportGenerator.Controllers
                 displayCitations = displayCitations.Where(s => s.Summary!.Contains(searchTerm));
             }
 
-            return View(displayCitations);
+            ViewBag.displayCitations = displayCitations.ToList();
+            return Redirect("ClientForm");
+            
         }
 
             /*else

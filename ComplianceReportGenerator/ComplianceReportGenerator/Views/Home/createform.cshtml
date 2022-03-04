@@ -76,12 +76,11 @@
 </form>
 
 <!--Search box!-->
-<form action="/clientform/createclientform" method="post">
+<form asp-controller="ClientForm" asp-action="Result" method="post">
     <div style="padding:5px;">
         <label for="searchTerm">Keyword:</label>
         <input type="text" name="searchTerm" id="searchTerm" />
     </div>
     <input type="submit" value="Search" />
-
 </form>
 
