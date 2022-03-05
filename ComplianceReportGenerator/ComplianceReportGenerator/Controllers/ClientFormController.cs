@@ -55,7 +55,7 @@ namespace ComplianceReportGenerator.Controllers
             context = dbContext;
         }
 
-        public IActionResult Results(string searchTerm)
+        public IActionResult Result(string searchTerm)
         {
             
             //List<ClientFormViewModel> displayCitations = new List<ClientFormViewModel>();
@@ -69,7 +69,7 @@ namespace ComplianceReportGenerator.Controllers
             }
 
             ViewBag.displayCitations = displayCitations.ToList();
-            return Redirect("ClientForm");
+            return Ok(ViewBag.displayCitations);
             
         }
 
