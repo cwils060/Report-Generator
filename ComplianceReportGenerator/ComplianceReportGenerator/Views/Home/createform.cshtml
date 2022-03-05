@@ -59,6 +59,42 @@
             </div>
         </div>
     </div>
+    @if (ViewBag.displayCitations != null)
+    {
+        <div>
+            <table>
+                <tr>
+                    <th> </th>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Chapter</th>
+                    <th>Section</th>
+                    <th>Summary</th>
+                    <th>Body</th>
+                    <th>Recommendation</th>
+                    <th>Low Penalty</th>
+                    <th>High Penalty</th>
+                </tr>
+                @foreach (var item in @ViewBag.displayCitations)
+                {
+                    <tr>
+                        <td>
+                            <input style="border-width:2px; border-radius:4px; border-color:black;" type="checkbox" /> <!--asp-for="Staff"-->
+                        </td>
+                        <td>@item.Id</td>
+                        <td>@item.Type</td>
+                        <td>@item.Chapter</td>
+                        <td>@item.Section</td>
+                        <td>@item.Summary</td>
+                        <td>@item.Body</td>
+                        <td>@item.Recommendation</td>
+                        <td>@item.LowPenalty</td>
+                        <td>@item.HighPenalty</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    }
     <div style="text-align:center;">
         <input style="border-radius: .35rem; border-width: 0rem; background-color: black; color: white;" type="submit" value="Finish and Export" />
     </div>
@@ -72,40 +108,3 @@
     </div>
     <input type="submit" value="Search" />
 </form>
-
-<div>
-    @if (ViewBag.displayCitations != null)
-    {
-        <table>
-            <tr>
-                <th> </th>
-                <th>ID</th>
-                <th>Type</th>
-                <th>Chapter</th>
-                <th>Section</th>
-                <th>Summary</th>
-                <th>Body</th>
-                <th>Recommendation</th>
-                <th>Low Penalty</th>
-                <th>High Penalty</th>
-            </tr>
-            @foreach (var item in @ViewBag.displayCitations)
-            {
-                <tr>
-                    <td>
-                        <input style="border-width:2px; border-radius:4px; border-color:black;" type="checkbox" /> <!--asp-for="Staff"-->
-                    </td>
-                    <td>@item.Id</td>
-                    <td>@item.Type</td>
-                    <td>@item.Chapter</td>
-                    <td>@item.Section</td>
-                    <td>@item.Summary</td>
-                    <td>@item.Body</td>
-                    <td>@item.Recommendation</td>
-                    <td>@item.LowPenalty</td>
-                    <td>@item.HighPenalty</td>
-                </tr>
-            }
-        </table>
-    }
-</div>
