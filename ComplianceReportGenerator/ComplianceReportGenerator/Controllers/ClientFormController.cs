@@ -71,7 +71,7 @@ namespace ComplianceReportGenerator.Controllers
                                     new Text($"Date of Audit {newClientForm.Date} \n Client Name: {newClientForm.ClientName} \n Client Rep: {newClientForm.ClientRep} \n Facility Type: {newClientForm.FacilityType} \n Address:{newClientForm.Address}"))))); ;
                 }
             }
-            return LocalRedirect("/Home/CreateForm");
+            return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Compliance-Report.docx");
 
         }
 
