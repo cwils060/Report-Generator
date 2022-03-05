@@ -56,8 +56,9 @@ namespace ComplianceReportGenerator.Controllers
         {
             MemoryStream ms;
 
-           
-        
+            var x = ViewBag.displayCitations;
+
+
             using (ms = new MemoryStream())
             {
                 using (WordprocessingDocument wordDocument = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
@@ -85,7 +86,7 @@ namespace ComplianceReportGenerator.Controllers
             context = dbContext;
         }
 
-        public IActionResult Result(string searchTerm)
+        public IActionResult Result(ClientFormViewModel newClientForm, string searchTerm)
         {
             
             //List<ClientFormViewModel> displayCitations = new List<ClientFormViewModel>();
@@ -98,9 +99,12 @@ namespace ComplianceReportGenerator.Controllers
                 displayCitations = displayCitations.Where(s => s.Summary!.Contains(searchTerm));
             }
 
-            ViewBag.displayCitations = displayCitations.ToList();
+            //ViewBag.displayCitations = displayCitations.ToList();
 
-            return View("~/Views/Home/CreateForm.cshtml");
+            newClientForm.Citations = displayCitations.ToList();
+
+
+            return View("~/Views/Home/CreateForm.cshtml", newClientForm);
         }
     }
 }
