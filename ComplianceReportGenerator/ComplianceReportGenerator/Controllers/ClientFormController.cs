@@ -99,61 +99,8 @@ namespace ComplianceReportGenerator.Controllers
             }
 
             ViewBag.displayCitations = displayCitations.ToList();
-            return Ok(ViewBag.displayCitations);
-            
+
+            return View("~/Views/Home/CreateForm.cshtml");
         }
-
-            /*else
-            {
-                if (searchType == "employer")
-                {
-                    jobs = context.Jobs
-                        .Include(j => j.Employer)
-                        .Where(j => j.Employer.Name == searchTerm)
-                        .ToList();
-
-                    foreach (Job job in jobs)
-                    {
-                        List<JobSkill> jobSkills = context.JobSkills
-                        .Where(js => js.JobId == job.Id)
-                        .Include(js => js.Skill)
-                        .ToList();
-
-                        JobDetailViewModel newDisplayJob = new JobDetailViewModel(job, jobSkills);
-                        displayJobs.Add(newDisplayJob);
-                    }
-
-                }
-                else if (searchType == "skill")
-                {
-                    List<JobSkill> jobSkills = context.JobSkills
-                        .Where(j => j.Skill.Name == searchTerm)
-                        .Include(j => j.Job)
-                        .ToList();
-
-                    foreach (var job in jobSkills)
-                    {
-                        Job foundJob = context.Jobs
-                            .Include(j => j.Employer)
-                            .Single(j => j.Id == job.JobId);
-
-                        List<JobSkill> displaySkills = context.JobSkills
-                            .Where(js => js.JobId == foundJob.Id)
-                            .Include(js => js.Skill)
-                            .ToList();
-
-                        JobDetailViewModel newDisplayJob = new JobDetailViewModel(foundJob, displaySkills);
-                        displayJobs.Add(newDisplayJob);
-                    }
-                }
-            }
-
-            ViewBag.columns = ListController.ColumnChoices;
-            ViewBag.title = "Jobs with " + ListController.ColumnChoices[searchType] + ": " + searchTerm;
-            ViewBag.jobs = displayJobs;
-
-            return View("Index");
-        }*/
-
     }
 }
