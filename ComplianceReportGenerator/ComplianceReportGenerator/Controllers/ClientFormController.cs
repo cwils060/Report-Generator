@@ -57,16 +57,6 @@ namespace ComplianceReportGenerator.Controllers
             return LocalRedirect("/Home/Createform");
         }
 
-        /*[HttpPost]
-        public async Task<IActionResult> AddCitations(int[] citationIds)
-        {
-            foreach (var id in citationIds)
-            {
-                var article = await context.Citations.FindAsync(id);
-            }
-            return RedirectToAction(nameof(CreateClientForm));
-        }*/
-
         public ActionResult CreateWordDoc(ClientFormViewModel newClientForm)
         {
             MemoryStream ms;
