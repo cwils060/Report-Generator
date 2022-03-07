@@ -29,9 +29,15 @@ namespace ComplianceReportGenerator.Controllers
         }
         
       [HttpPost]
-        public IActionResult CreateClientForm(ClientFormViewModel clientFormViewModel)
+        public IActionResult CreateClientForm(int[] citationIds, ClientFormViewModel clientFormViewModel)
         {
-           if (ModelState.IsValid)
+            
+            var citationList = new List<Citation>();
+            foreach (var id in citationIds)
+            {
+                citationList.Add(context.Citations.Find(id));
+            }
+            if (ModelState.IsValid)
             {
                 ClientFormViewModel newClientForm = new ClientFormViewModel
                 {
@@ -41,7 +47,7 @@ namespace ComplianceReportGenerator.Controllers
                     Staff = clientFormViewModel.Staff,
                     FacilityType = clientFormViewModel.FacilityType,
                     Address = clientFormViewModel.Address,
-                    Citations = clientFormViewModel.Citations
+                    Citations = citationList
                 };
 
                 return CreateWordDoc(newClientForm);
@@ -51,7 +57,16 @@ namespace ComplianceReportGenerator.Controllers
             return LocalRedirect("/Home/Createform");
         }
 
-        
+        /*[HttpPost]
+        public async Task<IActionResult> AddCitations(int[] citationIds)
+        {
+            foreach (var id in citationIds)
+            {
+                var article = await context.Citations.FindAsync(id);
+            }
+            return RedirectToAction(nameof(CreateClientForm));
+        }*/
+
         public ActionResult CreateWordDoc(ClientFormViewModel newClientForm)
         {
             MemoryStream ms;
