@@ -1,4 +1,5 @@
 ﻿using ComplianceReportGenerator.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,7 +19,20 @@ namespace ComplianceReportGenerator.Controllers
             _logger = logger;
         }
 
+    
         public IActionResult Index()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return LocalRedirect("/Identity/Account/Login");
+            }
+        }
+        
+        public IActionResult CreateForm()
         {
             return View();
         }

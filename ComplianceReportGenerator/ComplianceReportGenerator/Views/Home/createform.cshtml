@@ -1,0 +1,113 @@
+﻿@model ComplianceReportGenerator.Models.ClientFormViewModel
+<!--round edges for boxes, buttons black with white text, everything separated, -->
+
+<h1 style="text-align:center;">Just a little info before we get started here: </h1>
+
+<form asp-controller="ClientForm" asp-action="CreateClientForm" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div>
+                    <label style="padding-top:1rem; padding-bottom:.4rem; padding-left:2rem;" asp-for="Date">Date of Audit: </label>
+                </div>
+                <div>
+                    <label style="padding-top: .4rem; padding-bottom: .4rem; padding-left: 2rem;" asp-for="ClientName">Client Name: </label>
+                </div>
+                <div>
+                    <label style="padding-top: .4rem; padding-bottom: .4rem; padding-left: 2rem;" asp-for="ClientRep">Client Rep: </label>
+                </div>
+                <div>
+                    <label style="padding-top: 1.65rem; padding-bottom: .4rem; padding-left: 2rem;" asp-for="FacilityType">Facility Type: </label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div style="padding-top: 1rem; padding-bottom:.4rem; padding-left:.4rem; padding-right:.4rem;">
+                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="Date" required />
+                </div>
+                <div style="padding:.4rem;">
+                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="ClientName" required />
+                </div>
+                <div style="padding:.4rem;">
+                    <div>
+                        <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="ClientRep" required />
+                    </div>
+                    <!--the checkbox needs revisiting for styling. should have same styling as other boxes. check with nicole n group-->
+                    <div>
+                        <input style="border-width:1rem; border-radius:.1rem; border-color:black;" type="checkbox" asp-for="Staff" /> and staff
+                    </div>
+                </div>
+                <div style="padding:.4rem;" class="form-group">
+                    <select style="border-width:.15rem; border-radius:.25rem; border-color:black;" name="FacilityType" id="FacilityType" required>
+                        <option value=""></option>
+                        <option value="Cultivation">Cultivation</option>
+                        <option value="Production">Production</option>
+                        <option value="Dispensary">Dispensary</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div>
+                    <label style="padding-top:1rem; padding-bottom:.4rem; padding-left:3rem;" asp-for="Address">Address: </label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div style="padding-top: 1rem; padding-bottom:.4rem; padding-left:.4rem; padding-right:.4rem; ">
+                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="Address" required />
+                </div>
+                <!-- Need to check documentation and with group and Nicole for multiline inputs for address. looks much better. do we need it?
+                -->
+            </div>
+        </div>
+    </div>
+    <div style="padding:5px;">
+        <label for="searchTerm">Keyword:</label>
+        <input type="text" name="searchTerm" id="searchTerm" form="search-form" />
+    </div>
+    <input type="submit" value="Search" form="search-form" />
+    @if (Model != null && Model.Citations != null && Model.Citations.Any())
+    {
+        <div>
+            <table>
+                <tr>
+                    <th> </th>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Chapter</th>
+                    <th>Section</th>
+                    <th>Summary</th>
+                    <th>Body</th>
+                    <th>Recommendation</th>
+                    <th>Low Penalty</th>
+                    <th>High Penalty</th>
+                </tr>
+                @foreach (var item in Model.Citations)
+                {
+                    <tr>
+                        <td>
+                            <input style="border-width:2px; border-radius:4px; border-color:black;" type="checkbox" name="citationIds" value="@item.Id" /> <!--asp-for="Staff"-->
+                        </td>
+                        <td>@item.Id</td>
+                        <td>@item.Type</td>
+                        <td>@item.Chapter</td>
+                        <td>@item.Section</td>
+                        <td>@item.Summary</td>
+                        <td>@item.Body</td>
+                        <td>@item.Recommendation</td>
+                        <td>@item.LowPenalty</td>
+                        <td>@item.HighPenalty</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    }
+    <div style="text-align:center;">
+        <input style="border-radius: .35rem; border-width: 0rem; background-color: black; color: white;" type="submit" value="Finish and Export" />
+    </div>
+</form>
+
+<!--Search box!-->
+<form asp-controller="ClientForm" asp-action="Result" method="post" id="search-form">
+    <!--Hidden inputs for model passing-->
+    <input style="display: none;" asp-for="ClientRep" />
+    <input style="display: none;" asp-for="Date" />
+</form>

@@ -25,6 +25,7 @@ namespace ComplianceReportGenerator
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddMvc().AddRazorPagesOptions(options => options.Conventions.AddPageRoute("/Login", ""));
 
             //requires:
             //using AspNetCoreEmailConfirmationSendGrid.Services;
