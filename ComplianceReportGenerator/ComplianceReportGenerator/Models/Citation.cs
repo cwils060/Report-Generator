@@ -21,7 +21,7 @@ namespace ComplianceReportGenerator.Models
 
         public override string ToString()
         {
-            return $"Type: {this.Type}\n Chapter: {this.Chapter} Section: {this.Section} Summary: {this.Summary} Body: {this.Body} Recommendation: {this.Recommendation} Low Penalty: {this.LowPenalty} High Penalty: {this.HighPenalty}";
+            return $"Type: {Type}\n Chapter: {Chapter} Section: {Section} Summary: {Summary} Body: {Body} Recommendation: {Recommendation} Low Penalty: {LowPenalty} High Penalty: {HighPenalty}";
         }
     }
 }

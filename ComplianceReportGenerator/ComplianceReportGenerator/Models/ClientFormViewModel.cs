@@ -46,6 +46,12 @@ namespace ComplianceReportGenerator.Models
 
         public override string ToString()
         {
+            /*var y = "";
+            for (int i = 0; i < this.Citations.Count; i++)
+            {
+                y += Citations[i].ToString();
+            }
+            return y;*/
             string output = "";
 
            
