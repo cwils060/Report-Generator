@@ -29,9 +29,15 @@ namespace ComplianceReportGenerator.Controllers
         }
         
       [HttpPost]
-        public IActionResult CreateClientForm(ClientFormViewModel clientFormViewModel)
+        public IActionResult CreateClientForm(int[] citationIds, ClientFormViewModel clientFormViewModel)
         {
-           if (ModelState.IsValid)
+            
+            var citationList = new List<Citation>();
+            foreach (var id in citationIds)
+            {
+                citationList.Add(context.Citations.Find(id));
+            }
+            if (ModelState.IsValid)
             {
                 ClientFormViewModel newClientForm = new ClientFormViewModel
                 {
@@ -41,7 +47,7 @@ namespace ComplianceReportGenerator.Controllers
                     Staff = clientFormViewModel.Staff,
                     FacilityType = clientFormViewModel.FacilityType,
                     Address = clientFormViewModel.Address,
-                    Citations = clientFormViewModel.Citations
+                    Citations = citationList
                 };
 
                 return CreateWordDoc(newClientForm);
@@ -51,13 +57,13 @@ namespace ComplianceReportGenerator.Controllers
             return LocalRedirect("/Home/Createform");
         }
 
-        
         public ActionResult CreateWordDoc(ClientFormViewModel newClientForm)
         {
             MemoryStream ms;
 
-           
-        
+            var x = ViewBag.displayCitations;
+
+
             using (ms = new MemoryStream())
             {
                 using (WordprocessingDocument wordDocument = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
@@ -68,7 +74,7 @@ namespace ComplianceReportGenerator.Controllers
                         new Body(
                             new Paragraph(
                                 new Run(
-                                    new Text($"Date of Audit {newClientForm.Date} \n Client Name: {newClientForm.ClientName} \n Client Rep: {newClientForm.ClientRep} \n Facility Type: {newClientForm.FacilityType} \n Address:{newClientForm.Address}"))))); ;
+                                    new Text($"Date of Audit: {newClientForm.Date} \n Client Name: {newClientForm.ClientName} \n Client Rep: {newClientForm.ClientRep} \n Facility Type: {newClientForm.FacilityType} \n Address: {newClientForm.Address} \n Citations: {newClientForm.Citations[0].ToString()}"))))); ;
                 }
             }
             return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Compliance-Report.docx");
@@ -85,7 +91,7 @@ namespace ComplianceReportGenerator.Controllers
             context = dbContext;
         }
 
-        public IActionResult Result(string searchTerm)
+        public IActionResult Result(ClientFormViewModel newClientForm, string searchTerm)
         {
             
             //List<ClientFormViewModel> displayCitations = new List<ClientFormViewModel>();
@@ -98,9 +104,12 @@ namespace ComplianceReportGenerator.Controllers
                 displayCitations = displayCitations.Where(s => s.Summary!.Contains(searchTerm));
             }
 
-            ViewBag.displayCitations = displayCitations.ToList();
+            //ViewBag.displayCitations = displayCitations.ToList();
 
-            return View("~/Views/Home/CreateForm.cshtml");
+            newClientForm.Citations = displayCitations.ToList();
+
+
+            return View("~/Views/Home/CreateForm.cshtml", newClientForm);
         }
     }
 }

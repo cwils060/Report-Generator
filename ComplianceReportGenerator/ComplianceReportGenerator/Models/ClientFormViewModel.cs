@@ -33,7 +33,7 @@ namespace ComplianceReportGenerator.Models
             nextId++;
         }
         
-        public ClientFormViewModel(DateTime date, string clientName, string clientRep, bool staff, string facilityType, string address):this ()
+        public ClientFormViewModel(DateTime date, string clientName, string clientRep, bool staff, string facilityType, string address, List<Citation> citations):this ()
         {
             Date = date;
             ClientName = clientName;
@@ -41,10 +41,17 @@ namespace ComplianceReportGenerator.Models
             Staff = staff;
             FacilityType = facilityType;
             Address = address;
+            Citations = citations;
         }
 
         public override string ToString()
         {
+            /*var y = "";
+            for (int i = 0; i < this.Citations.Count; i++)
+            {
+                y += Citations[i].ToString();
+            }
+            return y;*/
             string output = "";
 
            

@@ -59,7 +59,12 @@
             </div>
         </div>
     </div>
-    @if (ViewBag.displayCitations != null)
+    <div style="padding:5px;">
+        <label for="searchTerm">Keyword:</label>
+        <input type="text" name="searchTerm" id="searchTerm" form="search-form" />
+    </div>
+    <input type="submit" value="Search" form="search-form" />
+    @if (Model != null && Model.Citations != null && Model.Citations.Any())
     {
         <div>
             <table>
@@ -75,11 +80,11 @@
                     <th>Low Penalty</th>
                     <th>High Penalty</th>
                 </tr>
-                @foreach (var item in @ViewBag.displayCitations)
+                @foreach (var item in Model.Citations)
                 {
                     <tr>
                         <td>
-                            <input style="border-width:2px; border-radius:4px; border-color:black;" type="checkbox" /> <!--asp-for="Staff"-->
+                            <input style="border-width:2px; border-radius:4px; border-color:black;" type="checkbox" name="citationIds" value="@item.Id" /> <!--asp-for="Staff"-->
                         </td>
                         <td>@item.Id</td>
                         <td>@item.Type</td>
@@ -101,10 +106,8 @@
 </form>
 
 <!--Search box!-->
-<form asp-controller="ClientForm" asp-action="Result" method="post">
-    <div style="padding:5px;">
-        <label for="searchTerm">Keyword:</label>
-        <input type="text" name="searchTerm" id="searchTerm" />
-    </div>
-    <input type="submit" value="Search" />
+<form asp-controller="ClientForm" asp-action="Result" method="post" id="search-form">
+    <!--Hidden inputs for model passing-->
+    <input style="display: none;" asp-for="ClientRep" />
+    <input style="display: none;" asp-for="Date" />
 </form>
