@@ -46,24 +46,12 @@ namespace ComplianceReportGenerator.Models
 
         public override string ToString()
         {
-            /*var y = "";
-            for (int i = 0; i < this.Citations.Count; i++)
+            string toString = $"Date of Audit: {Date} \n Client Name: {ClientName} \n Client Rep: {ClientRep} \n Facility Type: {FacilityType} \n Address: {Address} \n Citations: \n";
+                foreach (Citation str in Citations)
             {
-                y += Citations[i].ToString();
-            }
-            return y;*/
-            string output = "";
-
-           
-            
-            output = string.Format( 
-                    "Date of Audit: \n" +
-                    "Client Name: \n" +
-                    "Client Rep: \n" +
-                    "Facility Type: \n" +
-                    "Address: \n", Date, ClientName, ClientRep, FacilityType, Address);
-
-            return output;
+                toString += str.ToString();
+            };
+            return toString;
         }
 
         public override bool Equals(object obj)
