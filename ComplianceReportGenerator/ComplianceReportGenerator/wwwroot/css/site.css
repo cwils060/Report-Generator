@@ -73,3 +73,9 @@ body {
 /*Client form styles
 -------------------------------------------------- */
 
+.input-box {
+    border-width: .15rem;
+    border-radius: .25rem;
+    border-color: black;
+   
+}

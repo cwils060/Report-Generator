@@ -1,6 +1,7 @@
 ﻿@model ComplianceReportGenerator.Models.ClientFormViewModel
 <!--round edges for boxes, buttons black with white text, everything separated, -->
 
+
 <h1 style="text-align:center;">Just a little info before we get started here: </h1>
 
 <form asp-controller="ClientForm" asp-action="CreateClientForm" method="post">
@@ -22,18 +23,18 @@
             </div>
             <div class="col-sm">
                 <div style="padding-top: 1rem; padding-bottom:.4rem; padding-left:.4rem; padding-right:.4rem;">
-                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="Date" required />
+                    <input class="input-box" asp-for="Date" required />
                 </div>
                 <div style="padding:.4rem;">
-                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="ClientName" required />
+                    <input class="input-box" asp-for="ClientName" required />
                 </div>
                 <div style="padding:.4rem;">
                     <div>
-                        <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="ClientRep" required />
+                        <input class="input-box" asp-for="ClientRep" required />
                     </div>
                     <!--the checkbox needs revisiting for styling. should have same styling as other boxes. check with nicole n group-->
                     <div>
-                        <input style="border-width:1rem; border-radius:.1rem; border-color:black;" type="checkbox" asp-for="Staff" /> and staff
+                        <input class="input-box" type="checkbox" asp-for="Staff" /> and staff
                     </div>
                 </div>
                 <div style="padding:.4rem;" class="form-group">
@@ -52,7 +53,7 @@
             </div>
             <div class="col-sm">
                 <div style="padding-top: 1rem; padding-bottom:.4rem; padding-left:.4rem; padding-right:.4rem; ">
-                    <input style="border-width:.15rem; border-radius:.25rem; border-color:black;" asp-for="Address" required />
+                    <input class="input-box" asp-for="Address" required />
                 </div>
                 <!-- Need to check documentation and with group and Nicole for multiline inputs for address. looks much better. do we need it?
                 -->
@@ -61,7 +62,7 @@
     </div>
     <div style="padding:5px;">
         <label for="searchTerm">Keyword:</label>
-        <input type="text" name="searchTerm" id="searchTerm" form="search-form" />
+        <input class="input-box" type="text" name="searchTerm" id="searchTerm" form="search-form" />
     </div>
     <input type="submit" value="Search" form="search-form" />
     @if (Model != null && Model.Citations != null && Model.Citations.Any())
@@ -111,3 +112,7 @@
     <input style="display: none;" asp-for="ClientRep" />
     <input style="display: none;" asp-for="Date" />
 </form>
+
+@section Scripts {
+    <link href="@Url.Content("~/Content/site.css")" rel="stylesheet" type="text/css" />
+}
