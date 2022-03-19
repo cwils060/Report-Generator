@@ -74,7 +74,22 @@ namespace ComplianceReportGenerator.Controllers
                         new Body(
                             new Paragraph(
                                 new Run(
-                                    new Text(newClientForm.ToString())))));
+                                    new Text($"Date of Audit: {newClientForm.Date}"))),
+                            new Paragraph(
+                                new Run(
+                                    new Text($"Client Name: {newClientForm.ClientName}"))),
+                            new Paragraph(
+                                new Run(
+                                    new Text($"Client Rep: {newClientForm.ClientRep}"))),
+                            new Paragraph(
+                                new Run(
+                                    new Text($"Facility Type: {newClientForm.FacilityType}"))),
+                            new Paragraph(
+                                new Run(
+                                    new Text($"Address: {newClientForm.Address}"))),
+                            new Paragraph(
+                                new Run(
+                                    new Text($"Citations: {newClientForm.ToString()}"))))); 
                 }
             }
             return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Compliance-Report.docx");

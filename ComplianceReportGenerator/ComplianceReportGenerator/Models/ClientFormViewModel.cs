@@ -46,7 +46,8 @@ namespace ComplianceReportGenerator.Models
 
         public override string ToString()
         {
-            string toString = $"Date of Audit: {Date} \n Client Name: {ClientName} \n Client Rep: {ClientRep} \n Facility Type: {FacilityType} \n Address: {Address} \n Citations: \n";
+            //string toString = $"Date of Audit: {Date} \n Client Name: {ClientName} \n Client Rep: {ClientRep} \n Facility Type: {FacilityType} \n Address: {Address} \n Citations: \n";
+            string toString = "";
                 foreach (Citation str in Citations)
             {
                 toString += str.ToString();
