@@ -52,6 +52,8 @@ namespace ComplianceReportGenerator.Models
                 foreach (Citation str in Citations)
             {
                 toString += str.ToString();
+                //below doesn't work in the export though it does create a separation between ending high value and next citation Type
+                //toString += $"\n";
             };
             return toString;
         }

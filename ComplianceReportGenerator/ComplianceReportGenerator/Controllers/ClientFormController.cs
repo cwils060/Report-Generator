@@ -66,7 +66,7 @@ namespace ComplianceReportGenerator.Controllers
 
             using (ms = new MemoryStream())
             {
-                using (WordprocessingDocument wordDocument = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
+                using WordprocessingDocument wordDocument = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document);
                 {
                     MainDocumentPart mainPart = wordDocument.AddMainDocumentPart();
 
@@ -89,8 +89,10 @@ namespace ComplianceReportGenerator.Controllers
                                     new Text($"Address: {newClientForm.Address}"))),
                             new Paragraph(
                                 new Run(
-                                    new Text($"Citations: {newClientForm.ToString()}"))))); 
+                                    new Text($"Citations: \n{newClientForm.ToString()}")))));
+                   
                 }
+                
             }
             return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Compliance-Report.docx");
 
