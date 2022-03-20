@@ -89,7 +89,7 @@ namespace ComplianceReportGenerator.Controllers
                                     new Text($"Address: {newClientForm.Address}"))),
                             new Paragraph(
                                 new Run(
-                                    new Text($"Citations: \n{newClientForm.ToString()}")))));
+                                    new Text($"Citations: \n{newClientForm}")))));
                    
                 }
                 
