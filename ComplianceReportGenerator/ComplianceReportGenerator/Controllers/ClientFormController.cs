@@ -94,8 +94,8 @@ namespace ComplianceReportGenerator.Controllers
                 }
                 
             }
-            return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Compliance-Report.docx");
-
+            return File(ms.ToArray(), "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Compliance1-Report.docx");
+        
         }
 
 
